@@ -1,0 +1,71 @@
+here<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime tafsilotlari</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .anime-info { text-align: center; }
+    #episode-buttons button {
+      margin: 5px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      background: #223649;
+      color: white;
+      cursor: pointer;
+    }
+    #comments-list {
+      margin-top: 20px;
+      background: #1c1f2a;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    .comment {
+      border-bottom: 1px solid #333;
+      padding: 5px 0;
+    }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="anime-title">Yuklanmoqda...</h1>
+  </header>
+
+  <main>
+    <section class="anime-info">
+      <img id="anime-rasm" src="" alt="Rasm" style="max-width:300px;border-radius:10px;">
+      <p id="anime-tavsif"></p>
+      <p><b>Janr:</b> <span id="anime-janr"></span></p>
+      <p><b>Qismlar soni:</b> <span id="anime-jami"></span></p>
+      <p><b>Chiqqan qismlar:</b> <span id="anime-chiqqan"></span></p>
+      <a id="download" href="#" target="_blank">⬇️ Yuklab olish</a>
+    </section>
+
+    <section>
+      <h2>Online ko‘rish</h2>
+      <div id="episode-buttons"></div>
+      <video id="player" controls width="100%" style="max-width:600px; margin-top:10px;"></video>
+    </section>
+
+    <section>
+      <h2>Kommentlar</h2>
+      <div id="login-message">Komment yozish uchun login qiling!</div>
+      <form id="comment-form" class="hidden">
+        <textarea id="comment-text" placeholder="Fikr yozing..." required></textarea>
+        <button type="submit">Yuborish</button>
+      </form>
+      <div id="comments-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Anime Site | Admin: anilord71@gmail.com</p>
+  </footer>
+
+  <script type="module" src="../supabase.js"></script>
+  <script type="module" src="detail.js"></script>
+</body>
+</html>
