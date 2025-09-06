@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime ro‘yxati</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <h1>Anime Site</h1>
+    <nav>
+      <ul>
+        <li><a href="../search/index.html">Qidirish</a></li>
+        <li><a href="../add/index.html">Anime qo‘shish</a></li>
+        <li><a href="#" id="logout">Chiqish</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Barcha animelar</h2>
+    <div id="anime-grid" class="grid"></div>
+  </main>
+
+  <footer>
+    <p>© 2025 Anime Site | Admin: anilord71@gmail.com</p>
+  </footer>
+
+  <script type="module" src="../supabase.js"></script>
+  <script type="module" src="list.js"></script>
+</body>
+</html>
