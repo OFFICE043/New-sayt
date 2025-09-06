@@ -1,0 +1,77 @@
+here<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kirish yoki Ro‘yxatdan o‘tish</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body {
+      background: url("./bg.jpg") no-repeat center center/cover;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+    .box {
+      background: rgba(0,0,0,0.7);
+      padding: 20px;
+      margin: 10px;
+      border-radius: 12px;
+      width: 300px;
+      text-align: center;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 6px 0;
+      border-radius: 8px;
+      border: none;
+    }
+    button {
+      background: #223649;
+      border: none;
+      border-radius: 8px;
+      padding: 10px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 5px;
+      width: 100%;
+    }
+    button:hover {
+      background: #2e4a61;
+    }
+  </style>
+</head>
+<body>
+  <h1>Anime Site</h1>
+
+  <div id="register-box" class="box">
+    <h2>Ro‘yxatdan o‘tish</h2>
+    <form>
+      <input type="text" placeholder="Foydalanuvchi nomi" required>
+      <input type="password" id="parol1" placeholder="Parol" required>
+      <button type="submit">Ro‘yxatdan o‘tish</button>
+    </form>
+  </div>
+
+  <div id="login-box" class="box">
+    <h2>Kirish</h2>
+    <form>
+      <input type="text" placeholder="Foydalanuvchi nomi" required>
+      <input type="password" id="parol2" placeholder="Parol" required>
+      <button type="submit">Kirish</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>© 2025 Anime Site | Admin: anilord71@gmail.com</p>
+  </footer>
+
+  <script type="module" src="../supabase.js"></script>
+  <script type="module" src="auth.js"></script>
+</body>
+</html>
