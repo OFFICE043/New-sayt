@@ -63,10 +63,22 @@ async function loadAnime() {
       btn.addEventListener("click", () => {
         player.src = url;
         player.play();
+        saveHistory(index + 1); // ✅ tarixga yozamiz
       });
       episodeButtonsEl.appendChild(btn);
     });
   }
+}
+
+// === Tarixni saqlash ===
+async function saveHistory(episodeNum) {
+  if (!currentUser) return;
+  await supabase.from("history").upsert({
+    user_id: currentUser.id,
+    anime_id: animeId,
+    last_watched: episodeNum,
+    updated_at: new Date().toISOString()
+  });
 }
 
 // === Kommentlar yuklash ===
