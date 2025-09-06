@@ -1,0 +1,68 @@
+here<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime qo‘shish</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .form-box {
+      max-width: 500px;
+      margin: auto;
+      background: #1c1f2a;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .form-box input, .form-box textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 6px 0;
+      border-radius: 6px;
+      border: none;
+    }
+    .episode-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 5px;
+    }
+    .episode-row input {
+      flex: 1;
+    }
+    button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Yangi anime qo‘shish</h1>
+  </header>
+
+  <main>
+    <div class="form-box">
+      <form id="add-form">
+        <input type="text" id="nomi" placeholder="Anime nomi" required>
+        <textarea id="tavsif" placeholder="Tavsif" required></textarea>
+        <input type="text" id="janr" placeholder="Janr" required>
+        <input type="number" id="jami" placeholder="Qismlar soni" required>
+        <input type="number" id="chiqqan" placeholder="Chiqqan qismlar" required>
+        <input type="text" id="rasm" placeholder="Rasm URL" required>
+        <input type="text" id="yuklab" placeholder="Yuklab olish URL" required>
+
+        <h3>Epizod URL-lari</h3>
+        <div id="episodes"></div>
+        <button type="button" id="add-episode">➕ Epizod qo‘shish</button>
+        <br>
+        <button type="submit">Saqlash</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Anime Site | Admin: anilord71@gmail.com</p>
+  </footer>
+
+  <script type="module" src="../supabase.js"></script>
+  <script type="module" src="add.js"></script>
+</body>
+</html>
